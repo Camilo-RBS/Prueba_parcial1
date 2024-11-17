@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contáctanos - Temporis SmartWatches</title>
+</head>
+<body>
+    <header>
+        <header>
+            <div class="logo">
+                <img src="Img/logo.jpg" alt="Temporis Logo">
+                <h1>Temporis SmartWatches</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="benefits.html">Beneficios</a></li>
+                    <li><a href="features.html">Características</a></li>
+                    <li><a href="testimonials.html">Testimonios</a></li>
+                    <li><a href="cta.html">Comprar</a></li>
+                    <li><a href="contact.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </header>
+    </header>
+    <section id="contact">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>Si tienes alguna pregunta o duda, no dudes en ponerte en contacto con nosotros.</p>
+            <form id="contact-form" action="/send-message" method="post">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Motivo de tu mensaje" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" rows="6" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Temporis SmartWatches</p>
+    </footer>
+</body>
+</html>
