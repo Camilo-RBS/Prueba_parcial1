@@ -307,145 +307,86 @@ section {
 
 
 /*-------------------------------------------------*/
-.testimonial-carousel {
-    min-height: calc(100vh - 100px);
-    position: relative;
-    max-width: 600px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+#testimonials {
+    padding: 20px 0;
+    background-color: #fffa90;
+    min-height: 50vh;
+    max-height: 500px; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 20px; /* Ajusta el padding según lo necesites */
-    background-color: #fffa90; /
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.carousel-inner {
+.testimonial-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.testimonial-slider {
     display: flex;
-    width: 300%;
     transition: transform 0.5s ease-in-out;
 }
 
 .testimonial {
-    flex: 1;
+    flex: 0 0 100%;
+    text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    text-align: center;
-    min-height: 200px;
-    min-height: calc(100vh - 100px); /* Ajusta la altura restando el tamaño del header y footer */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 20px; /* Ajusta el padding según lo necesites */
-     
 }
 
-.testimonial p {
-    font-size: 18px;
-    color: #333;
+.testimonial img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
-.testimonial h3 {
-    font-size: 20px;
-    color: #555;
-}
-
-/* Controles del carrusel */
-input[type="radio"] {
-    display: none;
-}
-
-.carousel-control {
+.prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(51, 51, 51, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
     transition: background-color 0.3s;
+    border-radius: 4px;
 }
 
-.carousel-control:hover {
-    background-color: #ddd;
-}
-
-.carousel-control.prev {
+.prev-btn {
     left: 10px;
 }
 
-.carousel-control.next {
+.next-btn {
     right: 10px;
 }
 
-/* Posicionamiento del carrusel con radio buttons */
-#slide1:checked ~ .carousel-inner {
-    transform: translateX(0%);
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(51, 51, 51, 0.8);
 }
 
-#slide2:checked ~ .carousel-inner {
-    transform: translateX(-33.33%);
-}
 
-#slide3:checked ~ .carousel-inner {
-    transform: translateX(-66.66%);
-}
-
-/* Indicadores del carrusel */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 10px;
-}
-
-.carousel-indicators label {
-    cursor: pointer;
-    width: 10px;
-    height: 10px;
-    background: #ddd;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s;
-}
-
-#slide1:checked ~ .carousel-indicators label[for="slide1"],
-#slide2:checked ~ .carousel-indicators label[for="slide2"],
-#slide3:checked ~ .carousel-indicators label[for="slide3"] {
-    background-color: #333;
-}
-
-/* Estilos responsivos */
 @media (max-width: 768px) {
-    .testimonial-carousel {
-        max-width: 90%;
+    #testimonials {
+        min-height: 40vh;
+        max-height: 400px;
     }
 
-    .testimonial p {
+    .prev-btn, .next-btn {
         font-size: 16px;
-    }
-
-    .carousel-control {
-        font-size: 20px;
-        width: 35px;
-        height: 35px;
+        padding: 8px;
     }
 }
+
+
 /*-------------------------------------------------*/
 
 #cta {
@@ -454,13 +395,11 @@ input[type="radio"] {
     text-align: center;
     padding: 60px 20px; 
     width: 100%; 
-    min-height: calc(100vh - 100px); /* Ajusta la altura restando el tamaño del header y footer */
+    box-sizing: border-box; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 20px; /* Ajusta el padding según lo necesites */
+    justify-content: center; 
+    min-height: 300px; 
 }
 
 #cta h2 {
